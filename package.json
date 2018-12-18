@@ -1,0 +1,32 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "FriendFinder App",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efinfl/FriendFinder.git"
+  },
+  "keywords": [
+    "Friend",
+    "Finder",
+    "NodeJS",
+    "Epress",
+    "Path",
+    "SQL"
+  ],
+  "author": "Eric Figueroa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efinfl/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/efinfl/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,21 @@
+/* Serve static content for the app from the "public" directory in the application directory. */
+/* app.use(express.static("public")) */
+
+#navIcon {
+  font-size: 3rem;
+}
+
+.transparentBG {
+  opacity: 0.5;
+}
+
+body {
+  background: url("../images/adult-couple-dating-951290-scld.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#cardMargin {
+  margin-top: 3em;
+}
