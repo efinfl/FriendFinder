@@ -1,13 +1,47 @@
 /* Serve static content for the app from the "public" directory in the application directory. */
 /* app.use(express.static("public")) */
 
-#navIcon {
-  font-size: 3rem;
+/* font-family: 'Rubik', sans-serif; */
+
+.brand-logo {
+  font-family: "Rubik", sans-serif;
 }
 
-.transparentBG {
-  opacity: 0.5;
+p {
+  font-family: "Rubik", sans-serif;
 }
+
+.light {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Rubik", sans-serif;
+}
+
+.home {
+  color: white;
+}
+
+.textBg {
+  background-color:#01579b; 
+  padding: .3em;
+  
+}
+
+/* #navIcon {
+  font-size: 3rem;
+  margin-right: .3em;
+  line-height: 1em;
+} */
 
 body {
   background: url("../images/adult-couple-dating-951290-scld.jpg");
@@ -16,6 +50,8 @@ body {
   background-color: black;
 }
 
-#cardMargin {
-  margin-top: 3em;
+.mainContent {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  margin-top: 2em;
+  
 }
