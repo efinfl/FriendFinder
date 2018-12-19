@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../public/assets/css/reset.css" />
+    <!-- Materialize Compiled and minified CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <!-- Materialize icon CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet" />
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+</head>
+
+<body>
+    <!-- ========================= Nav ============================ -->
+    <!--
+      <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+          <div class="container">
+            <a href="#" class="brand-logo"
+              ><i class="medium material-icons" id="navIcon">account_circle</i
+              >Friend Finder</a
+            >
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    -->
+
+    <!--
+      =================================== Main Content ==========================
+    -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 mainContent z-depth-3">
+                <div class="row">
+                    <div class="col s10 offset-s1">
+                        <!-- Survey -->
+                        <h2 class="home textBg">FRIEND FINDER <br>SURVEY</h2>
+                        <!-- About you name -->
+                        <h4 class="white-text" id="aboutYou">About You</h4>
+                        <div class="input-field col s12 m6 white">
+                            <h5>Name (Required)</h5>
+                            <input type="text" class="validate" placeholder="Your Name Here" id="userName" />
+                        </div>
+                        <!-- About you photo -->
+                        <div class="input-field col s12 m6 white">
+                            <h5>Photo Link (Required)</h5>
+                            <input type="text" class="validate" placeholder="Photo Link Here" id="userPhoto" />
+                        </div>
+                        <!-- ---------------------- Questions ----------------------  -->
+                        <!---------------------------- qOne ------------------------------>
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 1: </span>You like cats.
+                            </h5>
+                            <select id="qOne">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-- ---------------------------- qTwo ------------------------------>
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 2: </span>You like dogs.
+                            </h5>
+                            <select id="qTwo">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!------------------------------  qThree ---------------------------- -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 3: </span>You love the beach.
+                            </h5>
+                            <select id="qThree" >
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-- --------------------- qFour--------------------- -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 4: </span>You're calm under pressure.
+                            </h5>
+                            <select id="qFour">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-- --------------------- qFive --------------------- -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 5: </span>You prefer a quite night in over going out with friends.
+                            </h5>
+                            <select id="qFive">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+
+                        <!-- --------------------- qSix --------------------- -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 6: </span>You feel compassion towards others
+                            </h5>
+                            <select id="qSix">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-----------------------  qSeven --------------------- -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 7: </span>Being around people energizes you.
+                            </h5>
+                            <select id="qSeven">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-- --------------------- qEight --------------------- -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 8: </span>You listen to NPR radio.
+                            </h5>
+                            <select id="qEight">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-- --------------------- qNine---------------------  -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 9: </span>You love to travel.
+                            </h5>
+                            <select id="qNine">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-----------------------  qTen---------------------  -->
+                        <div class="input-field col s12 white">
+                            <h5>
+                                <span class="question">Question 10: </span>Christmas is your favorite holiday.
+                            </h5>
+                            <select id="qTen">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Disagree)</option>
+                </select>
+                        </div>
+                        <!-- --------------------- -->
+                        <!-- <a href="/survey">
+                            <button class="waves-effect waves-light btn-small modal-trigger deep-orange darken-3" type="submit" href="#modal1" name: "action" id="submitButton">Submit Response</button>
+                        </a>
+                        <div>
+                            <div id="modal1" class="modal">
+                                <div class="modal-content">
+                                    <h4>Modal Header</h4>
+                                    <p>A bunch of text</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Materialize Javascript CDN -->
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" >
+    </script>
+
+    // <!-- Local JS -->
+    <script src="../public/assets/javascript/main.js"></script>
+
+    <!-- Materialize Auto Initiate -->
+    <script>
+        M.AutoInit();
+    </script>
+
+    // <!-- jQuery CDN -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script>
+    
+    
+    // Submit button gathers all the input 
+    $("#submitButton").click(function(event){
+        event.preventDefault()
+        /* Maybe do a validation for the the the questions using below.
+        return value !== NaN ;
+        return !isNaN(value);*/
+        var userData = {
+        name: $("#userName").val().trim(),
+        photo: $("#userPhoto").val().trim(),
+            scores: [
+                $("#qOne").val(),
+                $("#qTwo").val(),
+                $("#qThree").val(),
+                $("#qFour").val(),
+                $("#qFive").val(),
+                $("#qSix").val(),
+                $("#qSeven").val(),
+                $("#qEight").val(),
+                $("#qNine").val(),
+                $("#qTen").val()
+            ]
+        };
+        console.log(userData);
+        // Need a post ajax to post the captured info (var userData) to friends
+    $.post("/api/friends", userData).done(function(data) {
+        console.log('response = ' + JSON.stringify(data));
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        // Show the modal with the best match
+    }); 
+    });
+     
+    
+    </script>
+
+
+
+</body>
+
+</html>
+

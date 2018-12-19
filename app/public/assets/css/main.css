@@ -32,9 +32,13 @@ h5 {
 }
 
 .textBg {
-  background-color:#01579b; 
-  padding: .3em;
-  
+  background-color: #01579b;
+  padding: 0.3em;
+}
+
+.textBg2 {
+  background-color: #01579b;
+  padding: 0.3em;
 }
 
 /* #navIcon {
@@ -44,14 +48,23 @@ h5 {
 } */
 
 body {
-  background: url("../images/adult-couple-dating-951290-scld.jpg");
+  background: url("../images/adult-couple-dating-951290-scld.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-color: black;
 }
 
 .mainContent {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   margin-top: 2em;
-  
+}
+
+#aboutYou {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+.question {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
 }

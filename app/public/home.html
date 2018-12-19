@@ -5,75 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Materialize Compiled and minified CSS CDN -->
+
+    <!-- Reset CSS -->
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="../public/assets/css/reset.css"
+      href="assets/css/reset.css"
     />
+    <!-- Materialize Compiled and minified CSS CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-
-    <!-- Materialize Compiled and minified JavaScript CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Materialize icon CDN -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,700"
+      rel="stylesheet"
+    />
+
     <!-- Local Stylesheet -->
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="../public/assets/css/main.css"
+      href="assets/css/main.css"
     />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">
-
-
-    <script src="main.js"></script>
   </head>
   <body>
     <!-- ========================= Nav ============================ -->
-    <!-- <nav>
-      <div class="nav-wrapper blue-grey darken-4">
-        <div class="container">
-          <a href="#" class="brand-logo"
-            ><i class="medium material-icons" id="navIcon">account_circle</i
-            >Friend Finder</a
-          >
+    <!--
+      <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+          <div class="container">
+            <a href="#" class="brand-logo"
+              ><i class="medium material-icons" id="navIcon">account_circle</i
+              >Friend Finder</a
+            >
 
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-          </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav> -->
+      </nav>
+    -->
 
     <!--
       =================================== Main Content ==========================
     -->
     <div class="container">
       <div class="row">
-        <div class="col s12 mainContent">
+        <div class="col s12 mainContent z-depth-3">
           <div class="row">
             <div class="col s10 offset-s1">
-                <h3 class="home textBg">FRIEND FINDER</h3>
-                <h4 class="home light flow-text">Answer a few basic questions. Then find the friend with the greatest compatibility!</h4>
-                  <a class="waves-effect waves-light btn-small deep-orange darken-3">Get Started</a>
-
-                </div>
-        </div>
-          
-        
+              <h2 class="home textBg">FRIEND FINDER</h2>
+              <h4 class="home light flow-text">
+                Answer a few basic questions. Then find the friend with the
+                greatest compatibility!
+              </h4>
+              <a href="/survey">
+                <button class="waves-effect waves-light btn-small deep-orange darken-3" type="submit" name:"action">Get Started</button>
+              </a>
+              
+            </div>
           </div>
+        </div>
       </div>
-  </body>
+    </div>
+  
+  <!-- Marialize Javascript CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Local JS -->
+  <script src="../public/assets/javascript/main.js"></script>
+
+  <!-- Materialize Auto Initiate -->
+  <script>
+    M.AutoInit();
+  </script>
+
+  <!-- jQuery CDN -->
+  <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+</body>
 </html>
