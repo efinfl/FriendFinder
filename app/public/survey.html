@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- Reset CSS -->
     <link
       rel="stylesheet"
@@ -18,7 +17,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-
     <!-- Materialize icon CDN -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -29,7 +27,6 @@
       href="https://fonts.googleapis.com/css?family=Rubik:300,400,700"
       rel="stylesheet"
     />
-
     <!-- Local Stylesheet -->
     <link
       rel="stylesheet"
@@ -37,9 +34,31 @@
       media="screen"
       href="assets/css/main.css"
     />
+     <!-- jQuery CDN -->
+     <script
+     type="text/javascript"
+     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+   ></script>
   </head>
 
   <body>
+    <!-- ========================= Nav ============================ -->
+    
+    <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+          <div class="container">
+            <a class="brand-logo"
+              ><i class="medium material-icons" id="navIcon">account_circle</i
+              >Friend Finder</a
+            >
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/*">Home</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
     <!-- =================================== Main Content ========================== -->
     <div class="container">
       <div class="row">
@@ -47,7 +66,7 @@
           <div class="row">
             <div class="col s10 offset-s1">
               <!-- Survey -->
-              <h2 class="home textBg">FRIEND FINDER <br />SURVEY</h2>
+              <h2 class="home textBg">COMPATIBILITY <br>SURVEY</h2>
               <!-- About you name -->
               <div><h4 class="white-text" id="aboutYou">About You</h4></div>
               <div></div>
@@ -231,81 +250,76 @@
                 <button class="waves-effect waves-light btn-small modal-trigger deep-orange darken-3" type="submit" href="#modal1" name: "action" id="submitButton">Submit Response</button>
             </a>
               <!-- --------------------- -->
-            </div>
+            <!-- --------------------- -->
           </div>
         </div>
       </div>
     </div>
-    <!-- Materialize Javascript CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    //
-    <!-- Local JS -->
-    <script src="assets/javascript/main.js"></script>
-
-    <!-- Materialize Auto Initiate -->
-    <script>
-      M.AutoInit();
-    </script>
-
-    //
-    <!-- jQuery CDN -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-    ></script>
-
-    <script>
-      // Submit button gathers all the input
-      $("#submitButton").click(function(event) {
-        event.preventDefault();
-        /* Maybe do a validation for the the the questions using below.
-        return value !== NaN ;
-        return !isNaN(value);*/
-        var userData = {
-          name: $("#userName")
-            .val()
-            .trim(),
-          photo: $("#userPhoto")
-            .val()
-            .trim(),
-          scores: [
-            $("#qOne").val(),
-            $("#qTwo").val(),
-            $("#qThree").val(),
-            $("#qFour").val(),
-            $("#qFive").val(),
-            $("#qSix").val(),
-            $("#qSeven").val(),
-            $("#qEight").val(),
-            $("#qNine").val(),
-            $("#qTen").val()
-          ]
-        };
-        console.log(userData);
-        // Need a post ajax to post the captured info (var userData) to friends
-        $.post("/api/friends", userData).done(function(data) {
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#yourMatch").html(data.matchName);
-          $("#yourMatchImage").src(data.matchPhoto);
-          // Show the modal with the best match
-          $("modal1").modal("open");
-        });
-      });
-    </script>
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Meet Your Match</h4>
-        <h5>id="yourMatch"</h5>
-        <img id="yourMatchImage" class="materialboxed" width="400" src="" />
-      </div>
-      <div class="modal-footer">
-        <a href="/suvey" class="modal-close waves-effect waves-green btn-flat"
-          >Try It Again</a
-        >
-      </div>
+  </div>
+   <!-- Modal Structure -->
+   <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Meet Your Match</h4>
+      <h5 id="yourMatch"></h5>
+      <img id="yourMatchImage" class="materialboxed" width="400" src="" />
     </div>
-  </body>
+    <div class="modal-footer">
+      <a href="/suvey" class="modal-close waves-effect waves-green btn-flat"
+        >Try It Again</a
+      >
+    </div>
+  </div>
+  <!-- Materialize Javascript CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Local JS -->
+  <!-- <script src="assets/javascript/main.js"></script> -->
+  <!-- Materialize Auto Initiate -->
+  <script>
+    M.AutoInit();
+  </script>
+
+
+  <script>
+    // Submit button gathers all the input
+    $("#submitButton").click(function(event) {
+      event.preventDefault();
+      /* Maybe do a validation for the the the questions using below.
+      return value !== NaN ;
+      return !isNaN(value);*/
+      var userData = {
+        name: $("#userName")
+          .val()
+          .trim(),
+        photo: $("#userPhoto")
+          .val()
+          .trim(),
+        scores: [
+          $("#qOne").val(),
+          $("#qTwo").val(),
+          $("#qThree").val(),
+          $("#qFour").val(),
+          $("#qFive").val(),
+          $("#qSix").val(),
+          $("#qSeven").val(),
+          $("#qEight").val(),
+          $("#qNine").val(),
+          $("#qTen").val()
+        ]
+      };
+      console.log(userData);
+      // Need a post ajax to post the captured info (var userData) to friends
+      $.post("/api/friends", userData).then(function(data) {
+        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        $("#yourMatch").text(data.yourMatch);
+        $("#yourMatchImage").attr("src",data.yourMatchImage);
+        console.log("#yourMatch" + data.yourMatch);
+        console.log("#yourMatchImage" + data.yourMatchImage);
+        // Show the modal with the best match
+        $("modal1").modal("open");
+      });
+    });
+  </script>
+
+ 
+</body>
 </html>

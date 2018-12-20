@@ -41,11 +41,11 @@ h5 {
   padding: 0.3em;
 }
 
-/* #navIcon {
-  font-size: 3rem;
-  margin-right: .3em;
-  line-height: 1em;
-} */
+#navIcon {
+  font-size: 2.5rem;
+  /* margin-right: .3em; */
+  /* line-height: 1em; */
+}
 
 body {
   background: url("../images/adult-couple-dating-951290-scld.jpg") no-repeat center center fixed;

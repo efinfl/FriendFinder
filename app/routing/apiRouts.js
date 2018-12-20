@@ -28,27 +28,55 @@ module.exports = function(app) {
 
     var userData = req.body;
     var userAnswers = userData.scores;
+    
 
     // Will hold best matches name, photo and comparison
-    var yourMatch = "";
-    var yourMatchImage = "";
-    var totalDifference = 1000;
+    var bestMatch ={
+    yourMatch : "",
+    yourMatchImage : "",
+    friendDifference : Infinity
+    };
 
     // loop all friend's score and come up with difference for each person and user score. Use code below
+    var totalDifference = 0;
 
     for (var i = 0; i < friendsData.length; i++) {
       // console.log("friendsData = " + JSON.stringify(friendsData[i]));
+      var currentFriend = friendsData[i];
+      
 
-      var diff = 0;
-      for (var j = 0; j < userAnswers.length; j++) {
-        // console.log("userAnswer: " + JSON.stringify(userAnswers[j]));
-        totalDifference += Math.abs(
-          parseInt(parseInt(friendsData[i].score - userAnswers[j]))
-        );
+      // We then loop through all the scores of each friend
+      for (var j = 0; j < currentFriend.scores.length; j++) {
+        console.log("First total dif" + totalDifference);
+        var currentFriendScore = currentFriend.scores[j];
+        var currentUserScore = userAnswers[j];
+        // We calculate the difference between the scores and sum them into the totalDifference
+        totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
       }
-    }
+      console.log("here is the userScore" + currentUserScore);
+      console.log("here is the matchScore" + currentFriendScore);
+      console.log("here is the total dif" + totalDifference);
+      
+       // If the sum of differences is less then the differences of the current "best match"
+       if (totalDifference <= bestMatch.friendDifference) {
+        // Reset the bestMatch to be the new friend.
+        bestMatch.yourMatch = currentFriend.name;
+        bestMatch.yourMatchImage = currentFriend.photo;
+        bestMatch.friendDifference = totalDifference;
+        console.log("#yourMatch" + bestMatch.yourMatch);
+        console.log("#yourMatchImage" + bestMatch.yourMatchImage);
+      }
+      // for (var j = 0; j < userAnswers.length; j++) {
+      //   // console.log("userAnswer: " + JSON.stringify(userAnswers[j]));
+      //   totalDifference += Math.abs(
+      //     parseInt(parseInt(friendsData[i].score - userAnswers[j]))
+      //   );
+      }
 
     friendsData.push(userData);
+    console.log(bestMatch);
+
+    res.json(bestMatch);
 
     // var bestMatch should loop through friends data finds and holds best match
     // ----userData = request.data and this will be what's brought over from when user hits submit

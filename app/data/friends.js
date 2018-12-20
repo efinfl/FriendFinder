@@ -3,7 +3,7 @@ var friendsData = [
     name: "Bob Bobster",
     photo:
       "assets/images/male-4.png",
-    scores: [5, 3, 4, 4, 5, 1, 2, 5, 1, 3]
+    scores: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
   },
   {
     name: "Sally Sassy",
@@ -15,7 +15,7 @@ var friendsData = [
     name: "Tammy Toodles",
     photo:
       "assets/images/female-2.png",
-    scores: [2, 1, 4, 4, 5, 4, 3, 3, 4, 1]
+    scores: [2, 1, 1, 1, 1, 1, 3, 1, 1, 1]
   },
   {
     name: "Jack Johnston",
@@ -27,13 +27,13 @@ var friendsData = [
     name: "Harriet Happy",
     photo:
       "assets/images/female-1.png",
-    scores: [2, 2, 3, 4, 5, 3, 2, 4, 4, 1]
+    scores: [2, 1, 1, 4, 1, 3, 2, 4, 4, 1]
   },
   {
     name: "Justin Kase",
     photo:
       "assets/images/male-5.png",
-    scores: [2, 2, 4, 4, 3, 3, 4, 3, 4, 1]
+    scores: [2, 2, 5, 4, 1, 1, 4, 3, 5, 1]
   },
   {
     name: "Polly Ester",
