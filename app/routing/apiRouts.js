@@ -3,7 +3,7 @@
 // Linking routes to a "data" source ("/api/friends").
 // This data source holds the array, friendsData. It's being pulled bellow.
 var friendsData = require("../data/friends");
- // ===============================================================================
+// ===============================================================================
 // ROUTING
 // ===============================================================================
 
@@ -23,21 +23,37 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends", function(req, res) {
-    /* Grabs the data submitted to for processing 
-    to actually write to friends.js and add it to the whole array*/
-    
+    /* Grabs the data submitted by user for processing 
+    to for processing and  pushing*/
+
     var userData = req.body;
     var userAnswers = userData.scores;
 
-    friendsData.push(userData);
-
+    // Will hold best matches name, photo and comparison
     var yourMatch = "";
     var yourMatchImage = "";
+    var totalDifference = 1000;
+
+    // loop all friend's score and come up with difference for each person and user score. Use code below
+
+    for (var i = 0; i < friendsData.length; i++) {
+      // console.log("friendsData = " + JSON.stringify(friendsData[i]));
+
+      var diff = 0;
+      for (var j = 0; j < userAnswers.length; j++) {
+        // console.log("userAnswer: " + JSON.stringify(userAnswers[j]));
+        totalDifference += Math.abs(
+          parseInt(parseInt(friendsData[i].score - userAnswers[j]))
+        );
+      }
+    }
+
+    friendsData.push(userData);
 
     // var bestMatch should loop through friends data finds and holds best match
     // ----userData = request.data and this will be what's brought over from when user hits submit
     // var userScore
-    // loop all friend's score and come up with difference for each person and user score. Use code below
+
     // totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
     // Need logic to compare total diff of each to decide who's best match (if else)
     // Calculate difference between scores
