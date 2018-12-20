@@ -1,23 +1,15 @@
 // ===============================================================================
 // LOAD DATA
-// We are linking our routes to a series of "data" sources.
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
-
+// Linking routes to a "data" source ("/api/friends").
+// This data source holds the array, friendsData. It's being pulled bellow.
 var friendsData = require("../data/friends");
-
-
-// ===============================================================================
+ // ===============================================================================
 // ROUTING
 // ===============================================================================
 
+// module.export allows the resulting data to be accesses in another file
 module.exports = function(app) {
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
-
+  // This initially access the entire array and returns it as JSON
   app.get("/api/friends", function(req, res) {
     res.json(friendsData);
   });
@@ -31,20 +23,28 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends", function(req, res) {
-    // Push user data into friends array
-    // var bestMatch should loop through friends data finds and holds best match 
-        // userData = request.data and this will be what's brought over from when user hits submit
-        // var userScore
+    /* Grabs the data submitted to for processing 
+    to actually write to friends.js and add it to the whole array*/
+    
+    var userData = req.body;
+    var userAnswers = userData.scores;
+
+    friendsData.push(userData);
+
+    var yourMatch = "";
+    var yourMatchImage = "";
+
+    // var bestMatch should loop through friends data finds and holds best match
+    // ----userData = request.data and this will be what's brought over from when user hits submit
+    // var userScore
     // loop all friend's score and come up with difference for each person and user score. Use code below
     // totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
-    // Need logic to compare total diff of each to decide who's best match (if else) 
+    // Need logic to compare total diff of each to decide who's best match (if else)
     // Calculate difference between scores
-      // Add to total diff
-      // If sum of diff is less than total score, then they become best match
+    // Add to total diff
+    // If sum of diff is less than total score, then they become best match
     // return the best match as json for use in display of modal
-// write validator for form and run it on submit that everything is not null
-
-
+    // write validator for form and run it on submit that everything is not null
     // body is available since we're using the body parsing middleware
   });
 
@@ -52,10 +52,10 @@ module.exports = function(app) {
   // I added this below code so you could clear out the table while working with the functionality.
   // Don"t worry about it!
 
-//   app.post("/api/clear", function(req, res) {
-//     // Empty out the arrays of data
-//     friendsData.length = [];
+  //   app.post("/api/clear", function(req, res) {
+  //     // Empty out the arrays of data
+  //     friendsData.length = [];
 
-//     res.json({ ok: true });
-//   });
+  //     res.json({ ok: true });
+  //   });
 };
