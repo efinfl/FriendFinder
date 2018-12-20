@@ -2,7 +2,7 @@ var friendsData = [
   {
     name: "Bob Bobster",
     photo:
-      "assets/images/male1.png",
+      "assets/images/male-4.png",
     scores: [5, 3, 4, 4, 5, 1, 2, 5, 1, 3]
   },
   {
