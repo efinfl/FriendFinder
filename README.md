@@ -1,6 +1,7 @@
 # FriendFinder
-Friend Finder App using NodeJS, Express, SQL and Path.
 https://powerful-eyrie-83975.herokuapp.com/
+
+Created using NodeJS, Express, SQL and Path.
 
 ## How the app works:
 This is simulated dating app. The user answers a series. Each question is given a value of between 1 and 5. The sum is then compared to the sum of all the "friends" The one with the lowest difference is given as a match.
