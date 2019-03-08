@@ -1,5 +1,5 @@
 # FriendFinder
-https://powerful-eyrie-83975.herokuapp.com/
+https://friend-finder-efinfl.herokuapp.com/
 
 Created using NodeJS, Express, SQL and Path.
 
